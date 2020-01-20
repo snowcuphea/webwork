@@ -1,0 +1,31 @@
+@charset "EUC-KR";
+
+h1{
+	
+	color : #7cb6b9;
+}
+
+#beautiful{
+
+	background-color :#a7cece;
+	padding : 20px;
+	padding-left : 100px;
+	padding-bottom : 50px;
+	height : 80px;
+	font-style: italic;
+	margin : 30px;
+	background-image :url("../../images/background.gif");
+	/*상위 폴더 두 개 이동 */
+	background-repeat: no-repeat;
+	border-radius : 20px;
+	overflow: auto;
+	
+}
+
+#outer{
+	width : 80%;
+	margin-left : auto; /* 웹 뷰 자동맞춤 */
+	margin-right : auto;/* 웹 뷰 자동맞춤 */
+	text-align: justify; /*양쪽맞춤*/
+}
+

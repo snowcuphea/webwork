@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>로그인하세요.</title>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style-type: none;
+}
+
+#login_box {
+	width: 400px;
+	height: 200px;
+	border: solid 1px #bbbbbb;
+	margin: 10px 0 0 10px;
+	padding: 10px 0 0 15px;
+}
+
+h2 {
+	font-family: "Arial";
+	margin-bottom: 10px;
+}
+
+#login_box input {
+	width: 100px;
+	height: 18px;
+}
+
+#id_pass, #login_btn {
+	display: inline-block;
+	vertical-align: top;
+}
+
+#id_pass span {
+	display: inline-block;
+	width: 20px;
+}
+
+#pass {
+	margin-top: 3px;
+}
+
+#login_btn button {
+	margin-left: 5px;
+	padding: 12px;
+	border-radius: 5px;
+}
+
+#btns {
+	margin: 12px 0 0 0;
+	text-decoration: underline;
+}
+
+#btns li {
+	margin-left: 10px;
+	display: inline;
+}
+
+#left_inner {
+	float: left;
+}
+
+#right_inner {
+	float: left;
+	
+}
+
+.hotrecipepic{
+float : left;
+
+}
+
+
+</style>
+</head>
+<body>
+
+	<div id="header">
+		<div class="head">
+			<a class="logo" href=""> <img alt="매끼세끼" src="" />
+			</a>
+			<div class="top">
+				<ul>
+					<li>
+						<h3>
+							<a href="">냉장고</a>
+						</h3>
+					</li>
+					<li>
+						<h3>
+							<a href="">레시피</a>
+						</h3>
+					</li>
+					<li>
+						<h3>
+							<a href="">식당</a>
+						</h3>
+					</li>
+					<li class="mypage">
+						<h3>
+							<a href="">마이페이지</a>
+						</h3>
+
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div id="outter">
+		<div id="left_inner">
+			<h2>인기 레시피 top3</h2>
+			<div id ="loginrecipe">
+			<div class="hotrecipepic"><img src ="/clientweb/images/cat1.PNG" 
+		width ="150" height="200"><p>수원왕갈비통닭</p></div>
+			<div class="hotrecipepic"><img src ="/clientweb/images/cat1.PNG" 
+		width ="150" height="200"><p>밥도둑간장게장</p></div>
+			<div class="hotrecipepic"><img src ="/clientweb/images/cat1.PNG" 
+		width ="150" height="200"><p>겨울엔 동치미로 동동</p></div>
+
+			</div>
+			
+			<div id ="loginad"><!-- 기업광고란 -->
+			<div class="companyad"><img src ="/clientweb/images/sale.jpg" width ="450" height="200">
+			
+			</div>
+
+		</div>
+		<div id="right_inner">
+			<form>
+				<div id="login_box">
+					<h2>Member Login</h2>
+					<ul id="input_button">
+						<li id="id_pass">
+							<ul>
+								<li><span>ID</span> <input type="text"></li>
+								<!-- id -->
+								<li id="pass"><span>PW</span> <input type="password">
+								</li>
+								<!-- pass -->
+							</ul>
+						</li>
+						<li id="login_btn">
+							<button>로그인</button>
+						</li>
+					</ul>
+					<ul id="btns">
+						<li>회원 가입</li>
+						<li>아이디/비밀번호 찾기</li>
+					</ul>
+				</div>
+				<!-- login_box -->
+				<div id="notmember_box">
+					<h3>비회원으로 로그인</h3>
+				</div>
+				<div id="socialLogin_box">
+					<h3>소셜로그인</h3>
+					<li id="socialList">
+						<ul>
+							<li id="social1"><input type="button" value="naver로 로그인"></li>
+							
+							<li id="social2"><input type="button" value="kakao로 로그인"></li>
+		
+						</ul>
+					</li>
+
+				</div>
+		</div>
+
+
+
+	</div>
+
+
+	</form>
+</body>
+</html>

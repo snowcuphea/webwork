@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- css를 사용하는 방법과 선택자를 활용하는 방법 -->
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>하위 요소까지 선택 가능</title>
+<link type = "text/css" rel="stylesheet"
+	href="../common/css/mystyle.css">
+<style type="text/css">
+	div a {
+	color: hotpink;
+	text-decoration: none;
+	}
+	h1, h2{
+	color:blue;
+	}
+	div.myclass{
+	color:aqua;
+	}
+</style>
+</head>
+<body>
+	<!-- css속성을 태그 추가하며 바로 정의할 수 있다. 우선순위가 가장 높다. -->
+	<h1 style="border:solid red 1px; color = yellow;">지금은 CSS선택자 연습 중</h1>
+	<h2>
+		<a href="#">1. 태그명</a>
+	</h2>
+	<h2>2. class속성</h2>
+	<h2>3. id속성</h2>
+
+
+
+	<div class="myclass">
+		<a href="#">HTML 5</a>는 별도 프로그램을 깔지 않아도 인터넷 브라우저상에서 화려한 그래픽 효과를 구현하며,
+		음악ㆍ동영상을 자유롭게 감상할 수 있는 마크업 언어(markup language)이다.
+	</div>
+
+	<p>2004년부터 HTML 5 표준화 그룹인 WHATWG(Web Hypertext Application
+		Technology Working Group)는 HTML 5를 HTML의 차기 핵심 표준으로 만들기 위한 세부 작업을
+		시작하였고, 2014년 10월 웹표준화기구 월드와이드컨소시엄(W3C)은 HTML 5을 웹표준으로 선정했다.</p>
+
+
+	<div class="myclass">이에 따라 애플ㆍ마이크로소프트(MS), 구글, 페이스북 등 글로벌 IT 기업들은
+		HTML 5 시대 주도권을 잡기 위해 치열한 경쟁에 돌입하기도 했다. [네이버 지식백과] HTML 5 (시사상식사전, pmg
+		지식엔진연구소)</div>
+
+	<div>웹 문서를 제작하는 데 쓰이는 기본 프로그래밍 언어 HTML(hypertext markup
+		language)의 최신규격으로, 웹페이지를 구성하는 데 있어 지배적인 역할을 하는 마크업 언어(markup
+		language)이다.</div>
+
+	<p class="myclass">별도 설치 없이 웹브라우저 상에서 다양한 멀티미디어 콘텐츠와 앱 등을 바로 제공할 수
+		있다. [네이버 지식백과] HTML 5 (시사상식사전, pmg 지식엔진연구소)</p>
+
+	<div id="mydiv">로봇 청소기가 있는 장소는 N×M 크기의 직사각형으로 나타낼 수 있으며, 1×1크기의
+		정사각형 칸으로 나누어져 있다. 각각의 칸은 벽 또는 빈 칸이다. 청소기는 바라보는 방향이 있으며, 이 방향은 동, 서, 남,
+		북중 하나이다. 지도의 각 칸은 (r, c)로 나타낼 수 있고, r은 북쪽으로부터 떨어진 칸의 개수, c는 서쪽으로 부터
+		떨어진 칸의 개수이다.</div>
+
+</body>
+</html>

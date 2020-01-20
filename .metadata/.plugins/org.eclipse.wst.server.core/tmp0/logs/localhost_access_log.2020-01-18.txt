@@ -1,0 +1,7 @@
+127.0.0.1 - - [18/Jan/2020:23:46:06 +0900] "GET / HTTP/1.1" 404 750
+0:0:0:0:0:0:0:1 - - [18/Jan/2020:23:46:08 +0900] "GET /serverweb/jspbasic/login.jsp HTTP/1.1" 200 338
+0:0:0:0:0:0:0:1 - - [18/Jan/2020:23:46:14 +0900] "POST /serverweb/jspbasic/requestObjTest.jsp HTTP/1.1" 200 243
+0:0:0:0:0:0:0:1 - - [18/Jan/2020:23:46:47 +0900] "GET /serverweb/basic/calc.html HTTP/1.1" 200 414
+0:0:0:0:0:0:0:1 - - [18/Jan/2020:23:46:53 +0900] "POST /serverweb/calc.do HTTP/1.1" 200 45
+0:0:0:0:0:0:0:1 - - [18/Jan/2020:23:48:27 +0900] "GET /serverweb/jspbasic/dept_register.html HTTP/1.1" 200 2496
+0:0:0:0:0:0:0:1 - - [18/Jan/2020:23:48:44 +0900] "POST /serverweb/deptinsert.do HTTP/1.1" 500 1068

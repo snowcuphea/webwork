@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+	today = new Date();
+	
+	weekday = ["일","월","화","수","목","금","토"];
+	
+	
+	/*
+	toLocaleDateString()은 운영체제에 설정되어있느닌 locale정보를 이용해
+	날짜 데이터의 년원일 정보를 구성한다.
+	한국 - _년 _월 _일
+	미국 - _/_/_
+	
+	*/
+	document.write("<h2>"+today.toLocaleDateString()+
+			" " + weekday[today.getDay()] + "</h2>");
+
+</script>
+
+</body>
+</html>

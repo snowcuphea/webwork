@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="EUC-KR">
+	<title>Insert title here</title>
+	<style type="text/css">
+		#mydiv{
+			position: absolute;
+			left: 400px;
+			top: 100px;
+			font-size: 28pt;
+			color: red;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//이벤트의 약식 표현 - 동적요소에는 이벤트 적용이 불가능하다.
+			//클릭해서 추가된 애한테는 이벤트 적용 불가함.
+			$("#move_up").click(function(){
+				//animate - css속성을 적용해서 애니메이션효과를 적용
+				//		properties : css속성, duration:적용속도(1000이1초)
+				$("#mydiv").animate({top:30},20);
+			});
+			$("#move_down").click(function(){
+				$("#mydiv").animate({top:300},200);
+			});
+			//여러개를 할 때 json의 형태 {} 로:클릭일때, 마우스오버일 때 각각 정의해서 묶어줌
+			//on메소드를 통해 이벤트를 연결하는 것이 정식 방법
+			//=> 여러개의 이벤트에 반응 할 수 있도록 코드를 작성
+			//=> 동적으로 생성된 DOM객체에 이벤트를 연결할 수 있다. 
+			$("#changeColor").on(
+					{"click":function(){
+							$("#mydiv").css("color","green");
+							} //end function()
+						,
+						"mouseover":test}
+			//콜백으로 연결 가능 
+				
+			);
+		});
+		
+		function test(){
+			alert("마우스오버");
+		}
+	</script>
+	
+</head>
+<body>
+	<button id="move_up">올리기</button>
+	<button id="move_down">내리기</button>
+	<button id="changeColor">색상적용</button>
+	<button id="showtest">보이기/감추기</button>
+	<div id="mydiv">jquery test...</div>
+	
+</body>
+</html>

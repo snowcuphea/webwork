@@ -1,0 +1,11 @@
+INDEX VERSION 1.130
+C:\iot\programming\webwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1789798025.index
+\serverweb\src
+C:\iot\programming\webwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4013057641.index
+\clientweb\src
+C:\iot\programming\webwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2975099856.index
+\serverweb\src
+C:\iot\programming\webwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\567759070.index
+\serverweb\src
+C:\iot\programming\webwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1010276996.index
+\clientweb\src

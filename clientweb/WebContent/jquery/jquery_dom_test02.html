@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id="main">
+		<div class="test1">jquery~~~</div>
+		<div class="test2">jquery~~~~</div>
+		<div id="test3">jquery~~~~</div>
+		<div id="test4">jquery~~~~</div>
+		<div id="test5">jquery~~~~</div>
+	</div>
+	<form>
+		<input type="button" id="nodetest" value="노드가져오기"/>
+ 	</form>
+	<script type="text/javascript">
+		//DOM노드 액세스
+		$(document).ready(function(){
+			$("#nodetest").on("click",function(){
+				//특정노드의 하위 노드를 가져와서 작업하기
+				/* 
+				children(): 특정 노드의 하위노드를 모두 반환, 근데 엘리먼트 노드만 반환함.
+				last() : 특정 노드의 lastChild
+				first(): 특정 노드의 firstChild
+				*/
+				list = $("#main").children();
+				alert(list.length);
+				/* 
+					메소드 체이닝이 가능: 메소드의 반환결과로 바로 다른 메소드를 연결해서 호출할 수 있다.
+				*/
+				$("#main").children().css("color","blue"); //for문을 안 쓰고없이 모든 요소들을 변경할 수 있다. -> 자바스크립트로 짰으면 for문 썼어야됨.
+				$("#main").children().last().css("color", "pink");
+				//$("#main").children().first().css("color", "orange");
+				
+				//json의 형식으로 css속성을 정의한다. 콤마로 여러개의 속성을 준다.
+				$("#main").children().first().css({"color":"orange",
+													"border":"solid 1px red"});
+			});
+		});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

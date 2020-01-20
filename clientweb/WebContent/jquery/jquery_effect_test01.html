@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="../common/css/my_style.css"/>
+</head>
+<body>
+	<div id="clickMe">여기를 누르세요.</div>
+	<div id="picframe">
+		<img alt ="" src ="../images/m_garden01.jpg"/>
+	</div>
+	
+	<script type="text/javascript">
+	//제이쿼리 문법 : $ 로 시작. 
+	// (=페이지가 로딩되고 dom객체가 형성이 되면, 익명의 함수를 실행하겠습니다. )
+	$(document).ready(function() {
+		$("#clickMe").click(function(){
+			//클릭미가 실행되면 익명의 함수를 사용하겠다는 뜻 
+			//click의 매개변수 안에 익명의 함수를 정의한다. 
+			//alert("div눌려짐");
+			
+			//아이디가 picframe으로 정의된 객체를 화면에 보여지도록
+			//다시 클릭하면 화면에서 사라지도록
+			$("#picframe").slideToggle();
+			
+		});
+		
+		
+	});
+	
+	
+	
+	
+	</script>
+
+</body>
+</html>

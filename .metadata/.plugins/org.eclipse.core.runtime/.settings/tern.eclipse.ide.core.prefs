@@ -1,0 +1,6 @@
+defaultTernModules=outline,browser,browser-extension,jquery,ecma5,jquery-extension,jquery-ui1-12
+eclipse.preferences.version=1
+loadingLocalPlugin=false
+repositories=
+traceOnConsole=false
+used-repository-name=default

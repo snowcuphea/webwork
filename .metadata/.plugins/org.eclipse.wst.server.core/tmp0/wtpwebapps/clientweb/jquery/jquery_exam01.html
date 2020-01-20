@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>jquery</title>
+		<link rel ="stylesheet" href = "../common/css/my_style2.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	</head> 
+	<body>
+		<div id="header">
+			<h2>아침고요수목원~</h2>
+		</div>
+		<div id="main">
+			<div class="gardenimg"><img src="../images/m_garden01.jpg" /></div>
+			<div class="gardenimg"><img src="../images/m_garden02.jpg"/></div>
+			<div class="gardenimg"><img src="../images/m_garden03.jpg"/></div>
+			<div class="gardenimg"><img src="../images/m_garden05.jpg"/></div>
+		</div>
+		
+		<script>
+			$(document).ready(function() {
+				$(".gardenimg").on("mouseover",function(){
+					$(".gardenimg p").remove();//텍스트가 계속 생겨나니까 마우스를 올릴때마다 지워줘야함.
+					count = Math.floor(500+Math.random()*10);
+					data = $("<p>방문자수:"+count+"</p>");
+					$(this).append(data);  //this: 현재 작업중인 객체에 마우스를 올렸을 때.
+				});
+			});
+		</script>
+	</body>
+</html>

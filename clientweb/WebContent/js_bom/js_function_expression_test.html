@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		myfunc = function test(num){
+		//오른쪽에 정의한 함수를 myfunc로 정의. 표현식의 형태로 정의된 함수
+			if(num>90){ 
+				alert("성공");
+			}else{
+				alert("실패");
+					
+			}
+		}
+		//test(90); 표현식으로 함수를 정의했기 때문에 함수명을 사용할 수 없고,
+		//변수명을 이용해야 한다. 
+		
+
+		myfunc2 = function test(num){
+			//익명으로 정의할 수 있다. 어차피 변수명으로 호출할꺼라서 굳이 함수명 꼭 쓸 필요x
+				if(num>90){ 
+					alert("성공");
+				}else{
+					alert("실패");
+						
+				}
+			}
+	
+	
+	
+	</script>
+
+</body>
+</html>

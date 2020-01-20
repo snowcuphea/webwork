@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function calc(){
+		num1 = parseInt(myform1.num1.value); //value를 getter로 활용
+		myform1.num2.value = num1*1.2; //value를 setter로 활용
+	}
+	
+	function formexe(workingform){
+		//alert(workingform.num1.value);
+		workingform.submit();//일반 버튼을 submit처럼 활용
+		//이렇게 하면 submit을 다양한 폼에 적용시킬 수 있다.
+		
+	}
+	
+
+
+</script>
+</head>
+<body onload="alert('페이지로딩')">
+	<form name = "myform1" action="test.jsp">
+		<input type="text" name ="num1" onchange="calc()">
+		<!-- onchange: 요소가변경되었을때 발생하는 이벤트 -->
+		<input type="text" name ="num2">
+		<input type="button" value="전송"
+			onclick="formexe(this.form)">
+		<input type= "submit" value="전송2">
+		<!-- submit 할 때 동작을 수행하고 전송하기 때문에 action을 써줘야 한다. -->
+		<!-- form에서 button을 눌렀을때, submit의 효과를 내고 싶을때는? -->
+	
+	
+	<!-- 여러 폼의 똑같은 동작을 수행하고 싶을 때? this.form을 사용한다.! -->
+	<!-- 현재 작업중인 객체라는 뜻 -->
+		</form>
+	<form name = "myform2" action="test.jsp">
+		<input type="text" name ="num1" onchange="calc()">
+		<!-- onchange: 요소가변경되었을때 발생하는 이벤트 -->
+		<input type="text" name ="num2">
+		<input type="button" value="전송" onclick="formexe(this.form)">
+		<input type= "submit" value="전송2">
+		</form>
+		
+		
+	<form name = "myform3" action="test.jsp">
+		<input type="text" name ="num1" onchange="calc()">
+		<!-- onchange: 요소가변경되었을때 발생하는 이벤트 -->
+		<input type="text" name ="num2">
+		<input type="button" value="전송" onclick="formexe(this.form)">
+		<input type= "submit" value="전송2">
+		</form>	
+		
+		
+		
+		
+	<img alt="" src="/clientweb/images/ses_g1.jpg" name="myimg"
+		onmouseover="myimg.src='/clientweb/images/ses_g2.jpg'"
+		onmouseout="myimg.src='/clientweb/images/ses_g1.jpg'">
+</body>
+</html>

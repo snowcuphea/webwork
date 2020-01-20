@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+
+
+
+</head>
+<body>
+	<form name="myform">
+		<table border="1" width="800">
+			<tr>
+				<td><input type="checkbox" name="allchk" onclick="checkAll()"/>항목명</td>
+				<td>상품정보</td>
+				<td>수량</td>
+				<td>판매가</td>
+				<td>구매예정가</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="prd" onclick ="calc()"/>완도미역</td>
+				<td><img src="../images/pro1.jpg"/></td>
+				<td><input type="text" name="count" value="1" onkeyup="calc()"/></td>
+				<td><input type="text" name="price" value="6900"/><span>원</span></td>
+				<td><span class="calcprice"></span><span>원</span></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="prd" onclick = "calc()"/>스카트 빨아쓰는 휴지</td>
+				<td><img src="../images/pro2.jpg"/></td>
+				<td><input type="text" name="count" value="1" onkeyup="calc()"/></td>
+				<td><input type="text" name="price" value="7800"/><span>원</span></td>
+				<td><span class="calcprice"></span><span>원</span></td>
+			</tr>
+			<tr>
+				<td colspan="6" align="right"><span id="totalprice"></span><span>원</span></td>
+			</tr>
+		</table>
+	</form>
+	<script type="text/javascript">
+
+
+function checkAll(){
+	mycheck = document.myform.prd;//각 상품별 체크박스
+	allcheckVal = myform.allchk.checked; //전체선택체크박스
+	
+	for(i=0;i<mycheck.length;i++){
+		mycheck[i].checked = allcheckVal;
+	}
+	calc();
+	
+}
+//name이나class가 같으면 배열로 인식 가능
+
+function calc(){
+	mychk = myform.prd;
+	countArr = myform.count;
+	priceArr = myform.price;
+	calcpriceArr = document.getElementsByClassName("calcprice");
+	result = 0;
+	totalprice = 0;
+	
+	//체크박스의 갯수만큼 for문을 실행하면서 체크된 체크박스에 대해 계산
+	for(i=0;i<mychk.length;i++){
+		if(mychk[i].checked){
+			//계산해서 작업 중인 mychk의 index와 같은 index를 갖고 있는 calcpriceArr요소에 출력하기
+			result = parseInt(countArr[i].value) * parseInt(priceArr[i].value);
+			calcpriceArr[i].innerHTML = result;
+			totalprice = totalprice + result;
+		}else{
+			calcpriceArr[i].innerHTML = "";
+		}
+		
+		
+		document.getElementById("totalprice").innerHTML = totalprice;
+	}
+	
+	}
+	
+
+</script>
+	
+	
+</body>
+</html>
+
+
+

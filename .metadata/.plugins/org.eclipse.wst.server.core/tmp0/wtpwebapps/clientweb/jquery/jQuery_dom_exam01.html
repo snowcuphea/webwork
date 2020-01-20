@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- js_dom폴더에서 작업한 domExam.html의 내용을 jQuery로 변경 -->
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+	<title>Insert title here</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#insertP").on("click",function() {
+				data = $("<p>newP</p>"); //insert에만 필요하니까 여기에 정의 이게 click이벤트 안에 있으니까 insertP를 누를때마다 data객체가 생성된다.
+				$("#root").append(data)
+				//$("p:last").css("background-color", "yellow"); //p태그의 마지막 요소, 방법1
+				//data.css("background-color", "yellow"); // 방법2
+				//방법3, attr은 attribute
+				data.attr("style","background-color: yellow;border: 1px solid blue; font-weight: bolder;");
+			});
+			$("#deleteP").on("click",function() {
+				$("#root").children().last().remove();
+			});	
+			$("#deleteDivAndP").on("click",function() {
+				$("#root").empty();
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="layer"></div>
+
+	<hr>
+
+	<div id="root">
+		<p style="background: gray;">line01</p>
+		<p style="background: skyblue">line02</p>
+		<p style="background: green;">line03</p>
+		<p style="background: red;">line04</p>
+	</div>
+
+	<hr>
+	<button id="insertP">P태그추가하기</button>
+	<button id="deleteP">P태그삭제하기</button>
+	<button id="deleteDivAndP">div안의 모든 p태그 삭제하기</button>
+	<button id="innerHTML_test">innerHTML</button>	
+
+
+</body>
+</html>

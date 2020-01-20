@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+
+/*jumsu =80;
+
+if(jumsu<0 || jumsu >100){
+	alert("잘못 입력");
+	ch = "N";
+}else if(jumsu>=80){
+	ch = "수";
+}else if(jumsu>=60 && jumsu<80){
+	ch = "우";
+}else if(jumsu>=40 && jumsu<60){
+	ch = "미";
+}else if(jumsu>=20 && jumsu<40){
+	ch = "양";
+}else{
+	ch = "가";
+}
+switch(ch){
+
+case '수' :
+	document.write("<h1>환영합니다.(등급:"+ch+")</h1>");
+	document.write("<img src = '../images/jang1.jpg'/>");
+	break;
+case '우' : 
+	document.write("<h1>(등급:"+ch+")</h1>");
+	document.write("<img src = '../images/jang1.jpg'/>");
+	break;
+case '미' : 
+	document.write("<h1>(등급:"+ch+")</h1>");
+	document.write("<img src = '../images/jang1.jpg'/>");
+	break;
+case '양' : 
+	document.write("<h1>(등급:"+ch+")</h1>");
+	document.write("<img src = '../images/jang1.jpg'/>");
+	break;
+case '가' : 
+	document.write("<h1>(등급:"+ch+")</h1>");
+	document.write("<img src = '../images/jang1.jpg'/>");
+	break;
+case 'N' : 
+
+	break;
+
+}*/
+
+//또 다른 방법
+jumsu = 98;
+alert(Math.floor(jumsu/10)); //소수점 버리기
+if(jumsu>100 | jumsu<0){
+	document.write("잘못입력");
+}else{
+	switch(Math.floor(jumsu/10)){
+	case 10:
+	case 9:
+		document.write("수");
+		break;
+	case 7:
+		document.write("우");
+		break;
+	case 6:
+		document.write("미");
+		break;
+	case 5:
+		document.write("양");
+		break;
+	default;
+		document.write("가");
+
+	}
+	
+}
+
+</script>
+
+</body>
+</html>

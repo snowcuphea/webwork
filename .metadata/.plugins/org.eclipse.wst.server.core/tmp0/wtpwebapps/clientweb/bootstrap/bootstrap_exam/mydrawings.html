@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Masterpiece</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.8;
+    color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+    background-color: pink; 
+    color: #474e5d;
+  }
+  .bg-2 { 
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+  }
+  .bg-3 { 
+    background-color: beige; 
+    color: #555555;
+  }
+  .bg-4 { 
+    background-color: #2f2f2f; /* Black Gray */
+    color: #fff;
+  }
+  .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+    color: #1abc9c !important;
+  }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Masterpiece</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">WHO</a></li>
+        <li><a href="#">WHAT</a></li>
+        <li><a href="#">WHERE</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- First Container -->
+<div class="container-fluid bg-1 text-center">
+  <h3 class="margin">Who Am I?</h3>
+  <img src="../../images/bob.jpg" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="350" height="350">
+  <h3>세상과 그림으로 소통하는 위대한 아티스트. 외주 문의 환영 </h3>
+</div>
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h3 class="margin">돈줄</h3>
+  <p> 먹고 살아야해서 광고를 달았음 </p>
+  <a href="/clientweb/bootstrap/bootstrap_exam/destiny.html" class="btn btn-default btn-lg">
+    <span class="glyphicon glyphicon-search"></span> 광고보기
+  </a>
+</div>
+
+<!-- Third Container (Grid) -->
+<div class="container-fluid bg-3 text-center">    
+  <h3 class="margin">작품 소개</h3><br>
+  <div class="row">
+    <div class="col-sm-3">
+      <p>작품1 : 손흥민</p>
+      <img src="../../images/son.PNG" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3"> 
+		<p>작품2 : 트럼프</p>      
+		<img src="../../images/trump.PNG" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3"> 
+		<p>작품3 : 김정은</p>      
+		<img src="../../images/KimJong-un.PNG" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+    <div class="col-sm-3"> 
+	<p>작품4 : 장동건</p>      
+	<img src="../../images/jangdonggun.PNG" class="img-responsive margin" style="width:100%" alt="Image">
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+  <p>hello world! <a href="https://www.naver.com">www.w3schools.com</a></p> 
+</footer>
+
+</body>
+</html>

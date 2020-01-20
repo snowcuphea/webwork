@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+function printGuGu(dan){
+	for(i=1;i<10;i++){
+		document.write("<h3>"+dan+"*"+i+"="+dan*i+"</h3>");
+	}	
+}
+function calcNum(num1, num2){
+	result = num1 + num2;
+	return result;
+}
+
+</script>
+</head>
+<body>
+<input type = button value ="구구단"
+	onclick = "dan = parseInt(window.prompt('단을 입력하세요'));printGuGu(dan);">
+	<<input type = button value ="구구단"
+	on>
+	
+<script type="text/javascript">
+	num1 = parseInt(window.prompt('숫자1을 입력하세요'));
+	num2 = parseInt(window.prompt('숫자2를 입력하세요'));
+	alert(calcNum(num1, num2));
+</script>
+
+</body>
+</html>

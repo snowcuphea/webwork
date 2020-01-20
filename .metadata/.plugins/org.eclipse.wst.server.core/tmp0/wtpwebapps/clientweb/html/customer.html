@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+	 <form action="/clientweb/html/login.jsp" method="post"> 
+
+		<table border="1">
+			<tr>
+			</tr>
+			<th colspan="2">회원가입</th>
+			<tr>
+				<td>이름</td>
+				<td><input type="text" name="name" size="20" /></td>
+			</tr>
+
+			<tr>
+				<td>사용자ID</td>
+				<td><input type="text" name="id" size="20" /></td>
+
+			</tr>
+			
+			<tr>
+				<td>암호</td>
+				<td><input type="text" name="pass" size="20" /></td>
+			</tr>
+
+			<tr>
+				<td>암호확인</td>
+				<td><input type="text" name="passconfig" size="30" /></td>
+			</tr>
+			
+			<tr>
+				<td>주민등록번호</td>
+				<td><input type="text" name="iden" size=6 />
+				<input type="text" name="identi" size=7 /></td>
+			</tr>
+			
+			<tr>
+				<td>전화번호</td>
+				<td><input type="text" name="phone" size="3" />-
+				<input type="text" name="phonemiddle" size="4" />-
+				<input type="text" name="phonelast" size="4" /></td>
+			</tr>
+			
+			<tr>
+				<td>성별</td>
+				<td><input type="radio" name="gender"/>남자
+				<input type="radio" name="gender"/>여자</td>
+			</tr>
+			
+			<tr>
+				<td>직업</td>
+				<td>
+				<select name = "job">
+				<option >선택하여주십시오.</option>
+				<option value="student">학생</option>
+				<option value="salaryman">직장인</option>
+				<option value="teacher">선생님</option>
+				</select>
+			</td>
+		</tr>
+			
+			<tr>
+				<td>email 주소</td>
+				<td><input type="email" name="email" size="20" /></td>
+			</tr>
+			
+			<tr align="center">
+				<td colspan="2">
+				<input type="submit" value="가입신청" />
+				<input type="reset" value="취소" />
+				</td>
+			</tr>
+
+		</table>
+
+
+	</form>
+</body>
+</html>

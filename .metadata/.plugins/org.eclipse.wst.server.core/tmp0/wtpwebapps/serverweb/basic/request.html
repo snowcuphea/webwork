@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>서블릿요청하기</h1>
+	<hr/>
+	
+	<h2>get방식으로 요청하기</h2>
+	<a href = "http://localhost:8088/serverweb/first.multi">받은편지함</a>
+	<a href = "http://70.12.115.53:8088/serverweb/first.multi">받은편지함</a>
+	<a href = "/serverweb/first.multi">받은편지함</a>
+	
+	<form method="get" action="/serverweb/first.multi">
+		<input type = "text" name ="id"><br/>
+		<input type="submit" value="전송"/>
+	</form>
+	
+	<form method="post" action ="/serverweb/first.multi">
+		<input type = "text" name ="id"><br/>
+		<input type="submit" value="전송"/>
+	</form>
+	
+	<form method="get" action ="/serverweb/life">
+		<input type = "text" name ="id"><br/>
+		<input type="submit" value="get전송"/>
+	</form>
+	<form method="post" action ="/serverweb/life">
+		<input type = "text" name ="id"><br/>
+		<input type="submit" value="post전송"/>
+	</form>
+
+</body>
+</html>

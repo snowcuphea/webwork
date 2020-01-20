@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id="main">
+		<div class="test1">jquery~~~</div>
+		<div class="test2">jquery~~~~</div>
+		<div id="test3">jquery~~~~</div>
+		<div id="test4">jquery~~~~</div>
+		<div id="test5">jquery~~~~</div>
+	</div>
+	<p>jQuery 연습중...</p>
+	<div id="result"></div>
+	<div id="result2"></div>
+	<div id="result3">test진행</div>
+	<form>
+		<input type="number" id="data"/>
+		<input type="number" id="data2"/>
+		<input type="button" id="btn" value="값가져오기"/>
+ 	</form>
+	<script type="text/javascript">
+		//DOM노드 액세스
+		$(document).ready(function(){
+			$("p").hide();
+			//웹페이지에 값을 출력하기-setter, html태그가 실행되지 않고 문자열로 출력되어 나온다.
+			$("#result").text("<h1>div태그내부에 텍스트를 추가하기</h1>");
+			//웹페이지에 값을 출력하기-setter, html태그가 실행된다. 
+			$("#result2").html("<h1>div태그내부에 텍스트를 추가하기</h1>");
+			$("#data").on("keyup",function(){
+				//val() - 입력필드의 값을 반환:getter
+				myval = parseInt($("#data").val())+100000;
+				$("#result3").text(myval); //웹페이지에출력-setter
+			});
+			$("#btn").on("click",function(){
+				//웹페이지에 출력도니 값을 읽어오기-div태그내부의 문자열읽기(getter)
+				textVal = $("#result3").text();
+				//입력필드에 값을 출력한다. -setter
+				$("#data2").val(textVal);
+				
+			});
+		});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+#pagelist {
+	position : absolute;
+	list-style: none;
+	float: left;
+	display: inline;
+}
+
+#pagelist li {
+	float: left;
+}
+
+#pagelist li a {
+	float: left;
+	padding: 4px;
+	margin-right: 3px;
+	width: 15px;
+	color: #000;
+	font: bold 12px tahoma;
+	border: 1px solid #eee;
+	text-align: center;
+	text-decoration: none;
+}
+</style>
+
+</head>
+<body>
+
+	<div id="header">
+		<div class="head">
+			<a class="logo" href=""> <img alt="매끼세끼" src="" />
+			</a>
+			<div class="top">
+				<ul>
+					<li>
+						<h3>
+							<a href="">냉장고</a>
+						</h3>
+					</li>
+					<li>
+						<h3>
+							<a href="">레시피</a>
+						</h3>
+					</li>
+					<li>
+						<h3>
+							<a href="">식당</a>
+						</h3>
+					</li>
+					<li class="mypage">
+						<h3>
+							<a href="">마이페이지</a>
+						</h3>
+						<div class="mypage_inner">
+							<ul>
+								<li><a href="">페이지사용법</a></li>
+								<li><a href="">공지사항</a></li>
+								<li><a href="">자주묻는질문QnA</a></li>
+								<li><a href="">문의하기</a></li>
+
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<h2>공지사항</h2>
+	</div>
+
+	<div>
+		<table id="askboard" border="1">
+			<tr>
+				<th>번호</th>
+				<th>날짜</th>
+				<th>제목</th>
+				<th>글쓴이</th>
+				<th>조회수</th>
+
+			</tr>
+
+			<tr>
+				<td class="asknum">2</td>
+				<td class="date">2020/01/15</td>
+				<td class="title">[이벤트]이벤트 당첨자 안내</td>
+				<td class="name">관리자</td>
+				<td class="hit">89</td>
+
+			</tr>
+
+			<tr>
+				<td class="asknum">1</td>
+				<td class="date">2020/01/10</td>
+				<td class="title">[긴급]서버 점검 안내</td>
+				<td class="name">관리자</td>
+				<td class="hit">224</td>
+
+			</tr>
+
+		</table>
+	</div>
+	<div id="paging">
+		<ul id="pagelist">
+			<li><a href="#">◀</a></li>
+			<li><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li>
+			<li><a href="#">▶</a></li>
+		</ul>
+	</div>
+	<div id="searchdiv">
+		
+			<form id="search">
+				<select name="searchhow">
+					<option value="searchtitle">제목</option>
+					<option value="searchcontent">본문</option>
+				</select> <input type="text" id="searchtext" value="">
+				<input type="button" id="serachbutton" value="검색">
+			</form>
+		
+	</div>
+
+
+
+</body>
+</html>
