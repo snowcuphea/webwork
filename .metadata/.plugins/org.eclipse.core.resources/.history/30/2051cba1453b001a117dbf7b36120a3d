@@ -1,0 +1,60 @@
+package member;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import dept.DeptDAO;
+import dept.DeptDTO;
+
+
+@WebServlet(name = "memInsert", urlPatterns = { "/member/insert.do" })
+public class MemberInsertServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		request.setCharacterEncoding("euc-kr");
+		response.setContentType("text/html;charset=euc-kr");
+		System.out.println("실행완료");
+
+		PrintWriter pw = response.getWriter();
+
+		String id = request.getParameter("id");
+		String pass = request.getParameter("pass");
+		String name = request.getParameter("name");
+		String addr = request.getParameter("addr");
+		String deptno = request.getParameter("deptno");
+		String hiredate = request.getParameter("hiredate");
+		int point = Integer.parseInt(request.getParameter("point"));
+
+		System.out.println("아이디: " + id);
+		System.out.println("비밀번호: " + pass);
+		System.out.println("이름: " + name);
+		System.out.println("주소: " + addr);
+		System.out.println("부서코드: " + deptno);
+		System.out.println("입사일: " + hiredate);
+		System.out.println("포인트: " + point);
+		
+
+		//2. 비즈니스 메소드 call
+		MemberDTO mem = new MemberDTO(id, pass, name, addr, deptno, hiredate, point);
+		MemberDAO dao = new MemberDAO();
+		int result = dao.insert(mem);
+		
+		request.setAttribute("myresult", result);		
+	
+		//new 3.응답화면으로 요청재지정. 공유할 꺼라서 sendRedirect하면 안되고 RequestDispatcher해야함
+		RequestDispatcher rd = request.getRequestDispatcher("/member/mem_insertResult.jsp");
+		rd.forward(request, response);
+		
+		
+	}
+
+}

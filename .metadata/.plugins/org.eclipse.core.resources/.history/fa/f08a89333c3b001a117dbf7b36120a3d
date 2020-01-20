@@ -1,0 +1,40 @@
+package member;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet(name = "memInsert", urlPatterns = { "/member/insert.do" })
+public class MemberInsertServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		request.setCharacterEncoding("euc-kr");
+		response.setContentType("text/html;charset=euc-kr");
+		System.out.println("실행완료");
+
+		PrintWriter pw = response.getWriter();
+
+		String id = request.getParameter("deptNo");
+		String pass = request.getParameter("deptName");
+		String name = request.getParameter("loc");
+		String addr = request.getParameter("tel");
+		String deptno = request.getParameter("mgr");
+		String hiredate = request.getParameter("hiredate");
+		int point = request.getParameter("point");
+
+		System.out.println("부서번호: " + deptNo);
+		System.out.println("부서이름: " + deptName);
+		System.out.println("위치: " + loc);
+		System.out.println("전화번호: " + tel);
+		System.out.println("관리자: " + mgr);
+	}
+
+}

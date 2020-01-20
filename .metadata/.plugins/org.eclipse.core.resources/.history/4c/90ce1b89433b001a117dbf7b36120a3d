@@ -1,0 +1,52 @@
+<%@page import="jdbc.member.exam.MemberDTO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="dept.DeptDAO"%>
+<%@page import="dept.DeptDTO"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+	pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<%
+		//서블릿이 공유해준 ArrayList<DeptDTO> 객체 가져오기
+		ArrayList<MemberDTO> memlist = (ArrayList<MemberDTO>)request.getAttribute("memberlist");
+
+		int size = memlist.size();
+	%>
+
+	<h1>부서 목록 조회</h1>
+	<hr/>
+
+	<table border=1>
+	<tr>
+	<th>부서코드</th><th>부서명</th><th>위치</th><th>전화번호</th><th>관리자</th><th>삭제</th>
+	</tr>
+		<%
+			for (int i = 0; i < size; i++) {
+				MemberDTO mem = memlist.get(i);
+		%>
+		<tr>
+			<td><a href="/serverweb/member/read.do?deptNo=<%=mem.getId()%>"><%=mem.getId()%></a></td>
+			<td></td>
+			<td><%=mem.getPass()%></td>
+			<td><%=mem.getName()%></td>
+			<td><%=mem.getAddr()%></td>
+			<td><%=mem.getDeptno()%></td>
+			<td><%=mem.getHiredate()%></td>
+			<td><%=mem.getPoint()%></td>
+			<td>
+			<a href="/serverweb/member/delete.do?deptNo=<%=mem.getId() %>">삭제</a></td>
+		</tr>
+		<%
+			}
+		%>
+
+	</table>
+
+
+</body>
+</html>

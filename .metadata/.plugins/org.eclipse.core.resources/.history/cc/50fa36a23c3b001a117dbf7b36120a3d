@@ -1,0 +1,42 @@
+package member;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet(name = "memInsert", urlPatterns = { "/member/insert.do" })
+public class MemberInsertServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		request.setCharacterEncoding("euc-kr");
+		response.setContentType("text/html;charset=euc-kr");
+		System.out.println("실행완료");
+
+		PrintWriter pw = response.getWriter();
+
+		String id = request.getParameter("deptNo");
+		String pass = request.getParameter("deptName");
+		String name = request.getParameter("loc");
+		String addr = request.getParameter("tel");
+		String deptno = request.getParameter("mgr");
+		String hiredate = request.getParameter("hiredate");
+		int point = Integer.parseInt(request.getParameter("point"));
+
+		System.out.println("아이디: " + id);
+		System.out.println("비밀번호: " + pass);
+		System.out.println("이름: " + name);
+		System.out.println("주소: " + addr);
+		System.out.println("부서코드: " + deptno);
+		System.out.println("입사일: " + hiredate);
+		System.out.println("포인트: " + point);
+	}
+
+}

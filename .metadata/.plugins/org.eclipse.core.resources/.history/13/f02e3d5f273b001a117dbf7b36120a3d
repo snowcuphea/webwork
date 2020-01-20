@@ -1,0 +1,47 @@
+package dept;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class ReadServlet
+ */
+@WebServlet(name = "deptread", urlPatterns = { "/dept/read.do" })
+public class ReadServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.setCharacterEncoding("euc-kr");
+		response.setContentType("text/html;charset=euc-kr");
+		
+
+		PrintWriter pw = response.getWriter();
+
+		
+		String deptNo = request.getParameter("deptNo");
+		
+		//2.비지니스메소드 호출
+		DeptDAO dao = new DeptDAO();
+		int result = dao.delete(deptNo);
+		
+		//3. 데이터공유
+		request.setAttribute("deptNo", deptNo);
+		
+		
+		//4.요청 재지정
+		RequestDispatcher rd = request.getRequestDispatcher("/dept/dept_forwardListResult.jsp");
+		rd.forward(request, response);
+		
+		
+	}
+
+}

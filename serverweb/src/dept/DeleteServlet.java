@@ -17,7 +17,7 @@ public class DeleteServlet extends HttpServlet {
 	//하이퍼링크에서 요청했으므로 get방식
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
 		
 		request.setCharacterEncoding("euc-kr");
 		response.setContentType("text/html;charset=euc-kr");
@@ -32,7 +32,7 @@ public class DeleteServlet extends HttpServlet {
 		int result = dao.delete(deptNo);
 		
 		//3.응답메시지 생성
-		response.sendRedirect("/serverweb/dept/list.do");
+		response.sendRedirect("/serverweb/member/list.do");
 
 	}
 
