@@ -195,3 +195,12 @@
 0:0:0:0:0:0:0:1 - - [20/Jan/2020:15:12:38 +0900] "GET /serverweb/member/list.do HTTP/1.1" 200 1156
 0:0:0:0:0:0:0:1 - - [20/Jan/2020:15:12:40 +0900] "GET /serverweb/member/delete.do?id=snowcuphea HTTP/1.1" 302 -
 0:0:0:0:0:0:0:1 - - [20/Jan/2020:15:12:40 +0900] "GET /serverweb/member/list.do HTTP/1.1" 200 860
+127.0.0.1 - - [20/Jan/2020:16:19:57 +0900] "GET / HTTP/1.1" 404 750
+0:0:0:0:0:0:0:1 - - [20/Jan/2020:16:19:58 +0900] "GET /serverweb/dept/dept_register.jsp HTTP/1.1" 200 2497
+0:0:0:0:0:0:0:1 - - [20/Jan/2020:16:20:11 +0900] "POST /serverweb/deptinsert.do HTTP/1.1" 500 2926
+0:0:0:0:0:0:0:1 - - [20/Jan/2020:16:20:33 +0900] "GET /serverweb/dept/read.do HTTP/1.1" 500 2881
+0:0:0:0:0:0:0:1 - - [20/Jan/2020:16:21:15 +0900] "GET /serverweb/dept/dept_register.jsp HTTP/1.1" 200 2497
+0:0:0:0:0:0:0:1 - - [20/Jan/2020:16:21:18 +0900] "GET /serverweb/dept/list.do HTTP/1.1" 200 1547
+0:0:0:0:0:0:0:1 - - [20/Jan/2020:16:21:20 +0900] "GET /serverweb/dept/read.do?deptNo=001&info=%C7%D1%B1%DB%B5%A5%C0%CC%C5%CD HTTP/1.1" 200 2121
+0:0:0:0:0:0:0:1 - - [20/Jan/2020:16:25:15 +0900] "GET /serverweb/dept/list.do HTTP/1.1" 200 1547
+0:0:0:0:0:0:0:1 - - [20/Jan/2020:16:25:17 +0900] "GET /serverweb/dept/read.do?deptNo=001&info=%C7%D1%B1%DB%B5%A5%C0%CC%C5%CD HTTP/1.1" 200 2121
